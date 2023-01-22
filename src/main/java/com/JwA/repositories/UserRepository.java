@@ -17,10 +17,7 @@ public interface UserRepository extends JpaRepository<User, Integer> {
     @Query(value = "FROM User where email = :email AND password = :password")
     Optional<User> findByEmailAndPassword(String email, String password);
 
-    @Query(value = "FROM User where reset_password_token= :resetPasswordToken")
-    Optional<User> findByResetPasswordToken(String resetPasswordToken);
-
-    @Modifying
+    /*@Modifying
     @Query("UPDATE User SET is_active = false WHERE id = :userId")
-    void deactivateUser(int userId);
+    void deactivateUser(int userId);*/
 }

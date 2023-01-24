@@ -13,7 +13,7 @@ public class RegisterRequest {
     @NotEmpty(message = "Email cannot be empty")
     private String email;
 
-    @Pattern(message = "The password syntax is invalid! please try again.",regexp = "^(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])(?=.*[@#$%^&+=])(?=\\S+$).{8,}$")
+    @Pattern(message = "The password syntax is invalid! please try again.",regexp = "^(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])(?=.*[!@#$%^&*+=])(?=\\S+$).{8,}$")
     private String password;
 
     @NotBlank(message = "The first name field cannot be empty! please try again.")

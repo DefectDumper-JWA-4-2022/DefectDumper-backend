@@ -1,2 +1,5 @@
 Securing passwords: https://www.baeldung.com/spring-security-registration-password-encoding-bcrypt
 https://github.com/Baeldung/spring-security-registration
+https://www.oracle.com/technical-resources/articles/java/java8-optional.html
+https://github.com/devopsjourney1/jenkins-101
+http://jenkins-container.eastus.azurecontainer.io:8080/login?from=%2F

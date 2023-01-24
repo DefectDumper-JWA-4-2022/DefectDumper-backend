@@ -1,7 +1,6 @@
 package com.JwA.dtos;
 
 import com.JwA.models.User;
-import com.JwA.models.User;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 

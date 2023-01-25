@@ -7,6 +7,8 @@ import com.JwA.repositories.UserRepository;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
+import java.util.Optional;
+
 @Service
 public class UserService {
 
@@ -20,5 +22,10 @@ public class UserService {
     public UserResponse registerUser(RegisterRequest registerRequest) {
         User newUser =  new User(registerRequest);
         return new UserResponse(userRepository.save(newUser));
+    }
+
+    @Transactional
+    public Optional<User> findByCredentials(String email, String password) {
+        return userRepository.findByEmailAndPassword(email,password);
     }
 }

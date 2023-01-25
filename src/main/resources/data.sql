@@ -15,7 +15,7 @@ INSERT INTO users (id, email, password, first_name, last_name, role) VALUES
 
     1,
     'testuser@gmail.com',
-    'Password1*',
+    '2709e47e08eaa4ad48d1e8250fe631a5b87fa0c887e55ff3bc953a33d969c67e',
     'Testerson',
     'Usertown',
     'Manager'

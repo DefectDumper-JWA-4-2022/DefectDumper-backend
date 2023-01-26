@@ -2,10 +2,12 @@ package com.JwA.models;
 
 import com.JwA.dtos.RegisterRequest;
 import com.JwA.dtos.UserResponse;
+import com.google.common.hash.Hashing;
 import jakarta.persistence.*;
 import lombok.*;
 import org.hibernate.Hibernate;
 
+import java.nio.charset.StandardCharsets;
 import java.util.Objects;
 
 
@@ -29,14 +31,13 @@ public class User {
         this.email = registerRequest.getEmail();
         this.firstName = registerRequest.getFirstName();
         this.lastName = registerRequest.getLastName();
-        this.password = registerRequest.getPassword();
+        this.password = Hashing.sha256().hashString(registerRequest.getPassword(), StandardCharsets.UTF_8).toString();
         this.role = registerRequest.getRole();
     }
 
     
-    
     public User(UserResponse userResponse) {
-        this.id = userResponse.getUserId();
+        //this.id = userResponse.getUserId();
         this.email = userResponse.getEmail();
         this.firstName = userResponse.getFirstName();
         this.lastName = userResponse.getLastName();
